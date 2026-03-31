@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Rooms", href: "#accommodations" },
   { label: "Girls' Hostel", href: "#hostel" },
   { label: "Dining", href: "#dining" },
-  { label: "Amenities", href: "#amenities" },
+  { label: "Facilities", href: "#amenities" },
   { label: "Contact", href: "#contact" },
 ];
 

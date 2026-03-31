@@ -21,9 +21,9 @@ const HeroSection = () => (
         Premium Accommodation
       </p>
       <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-        Your Home Away From Home
+        Exclusive Hostel Facility
         <br />
-        <span className="text-secondary">— Steps From Campus</span>
+        <span className="text-secondary">Near Your Campus</span>
       </h1>
       <p className="max-w-2xl mx-auto text-primary-foreground/70 text-lg md:text-xl mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
         Premium accommodation designed for medical students, doctors, and families.

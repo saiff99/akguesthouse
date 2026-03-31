@@ -77,7 +77,7 @@ const ContactSection = () => {
               <MapPin size={20} className="text-secondary flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-foreground text-sm">Under 200m Walking Distance</p>
-                <p className="text-muted-foreground text-sm">Located right next to [Medical College Name], less than a 2-minute walk from the campus gate.</p>
+                <p className="text-muted-foreground text-sm">Located right next to JIMS Hospital, less than a 2-minute walk from the campus gate.</p>
               </div>
             </div>
 
