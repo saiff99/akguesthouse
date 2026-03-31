@@ -37,7 +37,7 @@ const Navbar = () => {
             size="sm"
             className="bg-secondary text-secondary-foreground hover:bg-gold-dark font-semibold"
           >
-            <a href="#contact">Book Your Stay</a>
+            <a href="#contact">Book Now</a>
           </Button>
         </div>
 
