@@ -34,7 +34,7 @@ const HeroSection = () => (
         <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-gold-dark font-semibold text-base px-8">
           <a href="#contact">Book Your Stay</a>
         </Button>
-        <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 font-semibold text-base px-8 text-secondary bg-secondary-foreground hover:bg-secondary-foreground/90 hover:text-secondary">
+        <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base px-8">
           <a href="#hostel">Inquire About Hostel</a>
         </Button>
       </div>
