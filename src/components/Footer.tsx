@@ -27,9 +27,9 @@ const Footer = () => (
         <div>
           <h4 className="font-semibold text-primary-foreground mb-3 text-sm">Contact</h4>
           <div className="space-y-2 text-primary-foreground/60 text-sm">
-            <p>+91 XXXXX XXXXX</p>
-            <p>info@akguesthouse.com</p>
-            <p>Near [Medical College], City, State</p>
+            <p>+91 9831319095</p>
+            <p>contact@akguesthouse.in</p>
+            <p>Near JIMS Hospital, Buita, Budge Budge, PIN - 700137</p>
           </div>
         </div>
 

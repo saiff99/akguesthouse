@@ -35,7 +35,7 @@ const HeroSection = () => (
           <a href="#contact">Book Your Room</a>
         </Button>
         <Button asChild size="lg" variant="outline" className="border-secondary hover:bg-secondary font-semibold text-base px-8 text-secondary-foreground">
-          <a href="#hostel">Inquire About Hostel</a>
+          <a href="#hostel">About Hostel</a>
         </Button>
       </div>
 

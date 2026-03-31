@@ -92,7 +92,7 @@ const ContactSection = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-secondary" />
-                <span className="text-foreground text-sm">info@akguesthouse.com</span>
+                <span className="text-foreground text-sm">contact@akguesthouse.in</span>
               </div>
               <div className="flex items-center gap-3">
                 <Clock size={18} className="text-secondary" />

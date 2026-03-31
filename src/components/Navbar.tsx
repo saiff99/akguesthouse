@@ -65,7 +65,7 @@ const Navbar = () => {
             size="sm"
             className="mt-2 w-full bg-secondary text-secondary-foreground hover:bg-gold-dark font-semibold"
           >
-            <a href="#contact" onClick={() => setOpen(false)}>Book Your Stay</a>
+            <a href="#contact" onClick={() => setOpen(false)}>Book Now</a>
           </Button>
         </div>
       )}

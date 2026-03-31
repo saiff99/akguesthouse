@@ -24,7 +24,7 @@ const rooms = [
       { icon: Sofa, label: "Seating Area" },
       { icon: Sparkles, label: "Premium Finishes" },
     ],
-    price: "Starting from ₹X,XXX/night",
+    price: "Starting from ₹9,000/month",
     image: "Photo: Spacious premium room with double bed, seating area, and modern décor",
   },
 ];
