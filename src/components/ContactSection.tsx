@@ -88,7 +88,7 @@ const ContactSection = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MessageCircle size={18} className="text-secondary" />
-                <span className="text-foreground text-sm">WhatsApp: +91 XXXXX XXXXX</span>
+                <span className="text-foreground text-sm">WhatsApp: +91 7003460592</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-secondary" />
