@@ -48,17 +48,6 @@ const ContactSection = () => {
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               required
             />
-            <Select value={form.roomType} onValueChange={(v) => setForm({ ...form, roomType: v })}>
-              <SelectTrigger>
-                <SelectValue placeholder="Select Room Type" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="basic">Basic AC Room</SelectItem>
-                <SelectItem value="premium">Premium AC Room</SelectItem>
-                <SelectItem value="hostel">Girls' Hostel</SelectItem>
-                <SelectItem value="other">Other Inquiry</SelectItem>
-              </SelectContent>
-            </Select>
             <Textarea
               placeholder="Your Message"
               value={form.message}
