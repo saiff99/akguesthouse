@@ -77,22 +77,22 @@ const ContactSection = () => {
               <MapPin size={20} className="text-secondary flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-foreground text-sm">Under 200m Walking Distance</p>
-                <p className="text-muted-foreground text-sm">Located right next to [Medical College Name], less than a 2-minute walk from the campus gate.</p>
+                <p className="text-muted-foreground text-sm">Located right next to JIMS Hospital, less than a 2-minute walk from the campus gate.</p>
               </div>
             </div>
 
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-secondary" />
-                <span className="text-foreground text-sm">+91 XXXXX XXXXX</span>
+                <span className="text-foreground text-sm">+91 9831319095</span>
               </div>
               <div className="flex items-center gap-3">
                 <MessageCircle size={18} className="text-secondary" />
-                <span className="text-foreground text-sm">WhatsApp: +91 XXXXX XXXXX</span>
+                <span className="text-foreground text-sm">WhatsApp: +91 7003460592</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-secondary" />
-                <span className="text-foreground text-sm">info@akguesthouse.com</span>
+                <span className="text-foreground text-sm">contact@akguesthouse.in</span>
               </div>
               <div className="flex items-center gap-3">
                 <Clock size={18} className="text-secondary" />

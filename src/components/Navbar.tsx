@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Rooms", href: "#accommodations" },
   { label: "Girls' Hostel", href: "#hostel" },
   { label: "Dining", href: "#dining" },
-  { label: "Amenities", href: "#amenities" },
+  { label: "Facilities", href: "#amenities" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -37,7 +37,7 @@ const Navbar = () => {
             size="sm"
             className="bg-secondary text-secondary-foreground hover:bg-gold-dark font-semibold"
           >
-            <a href="#contact">Book Your Stay</a>
+            <a href="#contact">Book Now</a>
           </Button>
         </div>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
             size="sm"
             className="mt-2 w-full bg-secondary text-secondary-foreground hover:bg-gold-dark font-semibold"
           >
-            <a href="#contact" onClick={() => setOpen(false)}>Book Your Stay</a>
+            <a href="#contact" onClick={() => setOpen(false)}>Book Now</a>
           </Button>
         </div>
       )}

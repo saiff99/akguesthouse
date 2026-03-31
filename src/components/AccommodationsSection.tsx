@@ -12,7 +12,7 @@ const rooms = [
       { icon: Bath, label: "Attached Bathroom" },
       { icon: Lamp, label: "Study Desk & Lamp" },
     ],
-    price: "Starting from ₹X,XXX/month",
+    price: "Starting from ₹7,999/month",
     image: "Photo: Clean, well-lit AC room with study desk and single bed",
   },
   {
@@ -24,7 +24,7 @@ const rooms = [
       { icon: Sofa, label: "Seating Area" },
       { icon: Sparkles, label: "Premium Finishes" },
     ],
-    price: "Starting from ₹X,XXX/night",
+    price: "Starting from ₹9,000/month",
     image: "Photo: Spacious premium room with double bed, seating area, and modern décor",
   },
 ];

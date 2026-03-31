@@ -21,9 +21,9 @@ const HeroSection = () => (
         Premium Accommodation
       </p>
       <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-        Your Home Away From Home
+        Exclusive Hostel Facility
         <br />
-        <span className="text-secondary">— Steps From Campus</span>
+        <span className="text-secondary">Near Your Campus</span>
       </h1>
       <p className="max-w-2xl mx-auto text-primary-foreground/70 text-lg md:text-xl mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
         Premium accommodation designed for medical students, doctors, and families.
@@ -32,10 +32,10 @@ const HeroSection = () => (
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
         <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-gold-dark font-semibold text-base px-8">
-          <a href="#contact">Book Your Stay</a>
+          <a href="#contact">Book Your Room</a>
         </Button>
         <Button asChild size="lg" variant="outline" className="border-secondary hover:bg-secondary font-semibold text-base px-8 text-secondary-foreground">
-          <a href="#hostel">Inquire About Hostel</a>
+          <a href="#hostel">About Hostel</a>
         </Button>
       </div>
 
