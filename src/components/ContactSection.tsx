@@ -84,7 +84,7 @@ const ContactSection = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-secondary" />
-                <span className="text-foreground text-sm">+91 XXXXX XXXXX</span>
+                <span className="text-foreground text-sm">+91 9831319095</span>
               </div>
               <div className="flex items-center gap-3">
                 <MessageCircle size={18} className="text-secondary" />
