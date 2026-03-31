@@ -2,18 +2,17 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", roomType: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({ title: "Inquiry Sent!", description: "We'll get back to you within 24 hours." });
-    setForm({ name: "", email: "", phone: "", roomType: "", message: "" });
+    setForm({ name: "", email: "", phone: "", message: "" });
   };
 
   return (
@@ -49,17 +48,6 @@ const ContactSection = () => {
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               required
             />
-            <Select value={form.roomType} onValueChange={(v) => setForm({ ...form, roomType: v })}>
-              <SelectTrigger>
-                <SelectValue placeholder="Select Room Type" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="basic">Basic AC Room</SelectItem>
-                <SelectItem value="premium">Premium AC Room</SelectItem>
-                <SelectItem value="hostel">Girls' Hostel</SelectItem>
-                <SelectItem value="other">Other Inquiry</SelectItem>
-              </SelectContent>
-            </Select>
             <Textarea
               placeholder="Your Message"
               value={form.message}
