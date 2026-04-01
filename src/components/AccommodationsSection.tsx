@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wind, Wifi, Bath, Lamp, BedDouble, Refrigerator, Sofa, Sparkles } from "lucide-react";
+import basicRoomImg from "@/assets/basic-ac-room.jpg";
+import premiumRoomImg from "@/assets/premium-ac-room.jpg";
 
 const rooms = [
   {
