@@ -1,4 +1,5 @@
 import { UtensilsCrossed, Leaf, Clock, Users } from "lucide-react";
+import rooftopDiningImg from "@/assets/rooftop-dining.jpg";
 
 const highlights = [
   { icon: Leaf, label: "Hygienic, Home-Style Cooking" },
