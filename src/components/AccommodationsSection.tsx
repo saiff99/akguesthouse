@@ -47,9 +47,7 @@ const AccommodationsSection = () => (
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {rooms.map((room) => (
           <Card key={room.title} className="overflow-hidden border-border hover:shadow-lg transition-shadow">
-            <div className="h-52 bg-muted flex items-center justify-center text-muted-foreground text-sm italic px-4">
-              {room.image}
-            </div>
+            <img src={room.image} alt={room.title} loading="lazy" width={800} height={544} className="h-52 w-full object-cover" />
             <CardHeader>
               <CardTitle className="font-display text-2xl text-foreground">{room.title}</CardTitle>
               <p className="text-muted-foreground text-sm mt-1">{room.description}</p>
