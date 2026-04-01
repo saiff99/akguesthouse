@@ -1,4 +1,5 @@
 import { UtensilsCrossed, Leaf, Clock, Users } from "lucide-react";
+import rooftopDiningImg from "@/assets/rooftop-dining.jpg";
 
 const highlights = [
   { icon: Leaf, label: "Hygienic, Home-Style Cooking" },
@@ -12,9 +13,7 @@ const DiningSection = () => (
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
         {/* Image placeholder */}
-        <div className="h-72 md:h-96 bg-muted rounded-lg flex items-center justify-center text-muted-foreground text-sm italic px-4">
-          Photo: Spacious rooftop restaurant with open-air seating and evening ambiance
-        </div>
+        <img src={rooftopDiningImg} alt="Rooftop dining restaurant with open-air seating" loading="lazy" width={800} height={544} className="h-72 md:h-96 w-full object-cover rounded-lg" />
 
         <div>
           <p className="text-secondary font-medium tracking-widest uppercase text-sm mb-2">Dine With a View</p>

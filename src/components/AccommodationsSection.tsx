@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wind, Wifi, Bath, Lamp, BedDouble, Refrigerator, Sofa, Sparkles } from "lucide-react";
+import basicRoomImg from "@/assets/basic-ac-room.jpg";
+import premiumRoomImg from "@/assets/premium-ac-room.jpg";
 
 const rooms = [
   {
@@ -13,7 +15,7 @@ const rooms = [
       { icon: Lamp, label: "Study Desk & Lamp" },
     ],
     price: "Starting from ₹7,999/month",
-    image: "Photo: Clean, well-lit AC room with study desk and single bed",
+    image: basicRoomImg,
   },
   {
     title: "Premium AC Room",
@@ -25,7 +27,7 @@ const rooms = [
       { icon: Sparkles, label: "Premium Finishes" },
     ],
     price: "Starting from ₹9,000/month",
-    image: "Photo: Spacious premium room with double bed, seating area, and modern décor",
+    image: premiumRoomImg,
   },
 ];
 
@@ -45,9 +47,7 @@ const AccommodationsSection = () => (
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {rooms.map((room) => (
           <Card key={room.title} className="overflow-hidden border-border hover:shadow-lg transition-shadow">
-            <div className="h-52 bg-muted flex items-center justify-center text-muted-foreground text-sm italic px-4">
-              {room.image}
-            </div>
+            <img src={room.image} alt={room.title} loading="lazy" width={800} height={544} className="h-52 w-full object-cover" />
             <CardHeader>
               <CardTitle className="font-display text-2xl text-foreground">{room.title}</CardTitle>
               <p className="text-muted-foreground text-sm mt-1">{room.description}</p>
