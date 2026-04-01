@@ -15,7 +15,7 @@ const rooms = [
       { icon: Lamp, label: "Study Desk & Lamp" },
     ],
     price: "Starting from ₹7,999/month",
-    image: "Photo: Clean, well-lit AC room with study desk and single bed",
+    image: basicRoomImg,
   },
   {
     title: "Premium AC Room",
