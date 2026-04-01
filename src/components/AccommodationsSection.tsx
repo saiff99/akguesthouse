@@ -27,7 +27,7 @@ const rooms = [
       { icon: Sparkles, label: "Premium Finishes" },
     ],
     price: "Starting from ₹9,000/month",
-    image: "Photo: Spacious premium room with double bed, seating area, and modern décor",
+    image: premiumRoomImg,
   },
 ];
 
