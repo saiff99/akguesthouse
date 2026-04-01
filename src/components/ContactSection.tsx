@@ -91,7 +91,7 @@ const ContactSection = () => {
             {/* Map placeholder */}
             <div className="h-48 rounded-lg overflow-hidden border border-border">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.0!2d88.1782!3d22.4756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027f4756e76b6d%3A0x2a2a2a2a2a2a2a2a!2sAK+GUEST+HOUSE!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps?q=AK+GUEST+HOUSE,+KP+Mondal+Rd,+Nishchintapur,+Budge+Budge,+Kolkata,+West+Bengal+700137&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
