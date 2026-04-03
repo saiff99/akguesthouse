@@ -48,12 +48,14 @@ const ContactSection = () => {
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input
+              name="name"
               placeholder="Your Name"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               required
             />
             <Input
+              name="email"
               type="email"
               placeholder="Email Address"
               value={form.email}
@@ -61,6 +63,7 @@ const ContactSection = () => {
               required
             />
             <Input
+              name="phone"
               type="tel"
               placeholder="Phone Number"
               value={form.phone}
@@ -68,13 +71,18 @@ const ContactSection = () => {
               required
             />
             <Textarea
+              name="message"
               placeholder="Your Message"
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               rows={4}
             />
-            <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-gold-dark font-semibold">
-              Send Inquiry
+            <Button
+              type="submit"
+              disabled={status === "sending"}
+              className="w-full bg-secondary text-secondary-foreground hover:bg-gold-dark font-semibold"
+            >
+              {status === "sending" ? "Sending..." : "Send Inquiry"}
             </Button>
           </form>
 
