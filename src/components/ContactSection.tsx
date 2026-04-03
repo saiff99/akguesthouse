@@ -3,16 +3,35 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "sonner";
+
+type SubmitStatus = "idle" | "sending" | "success" | "error";
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [status, setStatus] = useState<SubmitStatus>("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Inquiry Sent!", description: "We'll get back to you within 24 hours." });
-    setForm({ name: "", email: "", phone: "", message: "" });
+    setStatus("sending");
+    try {
+      const res = await fetch("https://formspree.io/f/xykbnwzy", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setForm({ name: "", email: "", phone: "", message: "" });
+        toast.success("Inquiry Sent! We'll get back to you within 24 hours.");
+      } else {
+        setStatus("error");
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      toast.error("Network error. Please check your connection and try again.");
+    }
   };
 
   return (
@@ -29,12 +48,14 @@ const ContactSection = () => {
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input
+              name="name"
               placeholder="Your Name"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               required
             />
             <Input
+              name="email"
               type="email"
               placeholder="Email Address"
               value={form.email}
@@ -42,6 +63,7 @@ const ContactSection = () => {
               required
             />
             <Input
+              name="phone"
               type="tel"
               placeholder="Phone Number"
               value={form.phone}
@@ -49,13 +71,18 @@ const ContactSection = () => {
               required
             />
             <Textarea
+              name="message"
               placeholder="Your Message"
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               rows={4}
             />
-            <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-gold-dark font-semibold">
-              Send Inquiry
+            <Button
+              type="submit"
+              disabled={status === "sending"}
+              className="w-full bg-secondary text-secondary-foreground hover:bg-gold-dark font-semibold"
+            >
+              {status === "sending" ? "Sending..." : "Send Inquiry"}
             </Button>
           </form>
 
