@@ -3,16 +3,35 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "sonner";
+
+type SubmitStatus = "idle" | "sending" | "success" | "error";
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [status, setStatus] = useState<SubmitStatus>("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Inquiry Sent!", description: "We'll get back to you within 24 hours." });
-    setForm({ name: "", email: "", phone: "", message: "" });
+    setStatus("sending");
+    try {
+      const res = await fetch("https://formspree.io/f/xykbnwzy", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setForm({ name: "", email: "", phone: "", message: "" });
+        toast.success("Inquiry Sent! We'll get back to you within 24 hours.");
+      } else {
+        setStatus("error");
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      toast.error("Network error. Please check your connection and try again.");
+    }
   };
 
   return (
