@@ -8,7 +8,7 @@ const Footer = () => (
         <div>
           <div className="mb-3" style={{ width: 'fit-content' }}>
             <div className="flex justify-center">
-              <img src={akLogo} alt="AK Guest House Logo" className="w-8 h-8 object-contain mb-1" />
+              <img src={akLogo} alt="AK Guest House Logo" className="w-8 h-8 object-contain" />
             </div>
             <h3 className="font-display text-lg font-bold text-primary-foreground">
               AK <span className="text-secondary">GUEST HOUSE</span>
