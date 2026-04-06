@@ -1,13 +1,17 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import akLogo from "@/assets/ak-logo.webp";
 
 const Footer = () => (
   <footer className="bg-primary py-12">
     <div className="container mx-auto px-4">
+      <div className="flex flex-col items-center mb-8">
+        <img src={akLogo} alt="AK Guest House Logo" className="h-16 w-auto mb-2" />
+        <h3 className="font-display text-lg font-bold text-primary-foreground">
+          AK <span className="text-secondary">GUEST HOUSE</span>
+        </h3>
+      </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         <div>
-          <h3 className="font-display text-lg font-bold text-primary-foreground mb-3">
-            AK <span className="text-secondary">GUEST HOUSE</span>
-          </h3>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
             Premium accommodation for medical students, doctors, and families — just steps from campus.
           </p>
