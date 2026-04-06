@@ -6,8 +6,8 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         <div>
-          <div className="flex items-center gap-2 mb-3">
-            <img src={akLogo} alt="AK Guest House Logo" className="w-8 h-8 object-contain" />
+          <div className="flex flex-col items-center mb-3">
+            <img src={akLogo} alt="AK Guest House Logo" className="w-8 h-8 object-contain mb-1" />
             <h3 className="font-display text-lg font-bold text-primary-foreground">
               AK <span className="text-secondary">GUEST HOUSE</span>
             </h3>
