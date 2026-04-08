@@ -109,6 +109,7 @@ export default {
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
         "float-slow": "float-slow 6s ease-in-out infinite",
         "float-medium": "float-medium 5s ease-in-out infinite",
+        "page-in": "page-in 0.4s ease-out forwards",
       },
     },
   },
