@@ -11,7 +11,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const Index = () => (
   <div className="min-h-screen">
-    <Navbar />
+    <HeroSection />
     <HeroSection />
     <ScrollReveal>
       <AccommodationsSection />
