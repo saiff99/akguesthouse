@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AccommodationsSection from "@/components/AccommodationsSection";
 import HostelSection from "@/components/HostelSection";
