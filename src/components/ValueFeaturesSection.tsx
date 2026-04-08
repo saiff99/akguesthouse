@@ -1,4 +1,5 @@
 import { Zap, WashingMachine, BookOpen } from "lucide-react";
+import StaggerReveal from "@/components/StaggerReveal";
 
 const features = [
   {
@@ -28,7 +29,7 @@ const ValueFeaturesSection = () => (
         </h2>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <StaggerReveal className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto" staggerMs={150}>
         {features.map((f) => (
           <div key={f.title} className="bg-card rounded-lg p-8 border border-border text-center hover:shadow-lg transition-shadow">
             <div className="w-14 h-14 rounded-full bg-secondary/15 flex items-center justify-center mx-auto mb-5">
@@ -38,7 +39,7 @@ const ValueFeaturesSection = () => (
             <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>
           </div>
         ))}
-      </div>
+      </StaggerReveal>
     </div>
   </section>
 );

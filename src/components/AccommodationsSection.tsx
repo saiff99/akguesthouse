@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wind, Wifi, Bath, Lamp, BedDouble, Refrigerator, Sofa, Sparkles } from "lucide-react";
+import StaggerReveal from "@/components/StaggerReveal";
 import basicRoomImg from "@/assets/481d565c-ff6d-4481-94a1-b5e2fe4c3047.jpg";
 import premiumRoomImg from "@/assets/premium-ac-room.jpg";
 
@@ -44,7 +45,7 @@ const AccommodationsSection = () => (
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <StaggerReveal className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto" staggerMs={200}>
         {rooms.map((room) => (
           <Card key={room.title} className="overflow-hidden border-border hover:shadow-lg transition-shadow">
             <img src={room.image} alt={room.title} loading="lazy" width={800} height={544} className="h-52 w-full object-cover" />
@@ -68,7 +69,7 @@ const AccommodationsSection = () => (
             </CardContent>
           </Card>
         ))}
-      </div>
+      </StaggerReveal>
     </div>
   </section>
 );

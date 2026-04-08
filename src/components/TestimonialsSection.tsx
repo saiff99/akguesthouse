@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import StaggerReveal from "@/components/StaggerReveal";
 
 const testimonials = [
   {
@@ -28,7 +29,7 @@ const TestimonialsSection = () => (
         </h2>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <StaggerReveal className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto" staggerMs={150}>
         {testimonials.map((t) => (
           <div key={t.name} className="bg-card border border-border rounded-lg p-6 hover:shadow-md transition-shadow">
             <div className="flex gap-1 mb-4">
@@ -43,7 +44,7 @@ const TestimonialsSection = () => (
             </div>
           </div>
         ))}
-      </div>
+      </StaggerReveal>
     </div>
   </section>
 );
