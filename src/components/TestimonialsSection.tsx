@@ -45,6 +45,7 @@ const TestimonialsSection = () => (
           </div>
         ))}
       </StaggerReveal>
+    </div>
   </section>
 );
 
