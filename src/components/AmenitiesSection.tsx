@@ -1,4 +1,5 @@
-import { ConciergeBell, Wifi, ShieldCheck, Car, Zap, WashingMachine, BookOpen } from "lucide-react";
+import { ConciergeBell, Wifi, ShieldCheck, Car, Zap, WashingMachine } from "lucide-react";
+import StaggerReveal from "@/components/StaggerReveal";
 
 const amenities = [
   { icon: ConciergeBell, title: "24-Hour Room Service", desc: "Assistance available round the clock — whatever you need, whenever you need it." },
@@ -22,7 +23,7 @@ const AmenitiesSection = () => (
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <StaggerReveal className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" staggerMs={120}>
         {amenities.map((a) => (
           <div key={a.title} className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-lg p-6 hover:bg-primary-foreground/10 transition-colors">
             <a.icon size={28} className="text-secondary mb-3" />
@@ -30,7 +31,7 @@ const AmenitiesSection = () => (
             <p className="text-sm text-primary-foreground/60">{a.desc}</p>
           </div>
         ))}
-      </div>
+      </StaggerReveal>
     </div>
   </section>
 );
