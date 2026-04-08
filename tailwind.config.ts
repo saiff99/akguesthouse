@@ -98,6 +98,10 @@ export default {
           "0%, 100%": { transform: "translateY(0) translateX(0)" },
           "50%": { transform: "translateY(-8px) translateX(6px)" },
         },
+        "page-in": {
+          from: { opacity: "0", transform: "translateY(12px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
