@@ -22,11 +22,11 @@ const NotFound = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(var(--secondary)/0.08)_0%,_transparent_70%)]" />
 
       {/* Decorative scattered elements */}
-      <div className="absolute top-[15%] left-[10%] w-20 h-20 border border-secondary/10 rounded-full" />
-      <div className="absolute bottom-[20%] right-[12%] w-32 h-32 border border-primary/10 rounded-full" />
-      <div className="absolute top-[40%] right-[20%] w-2 h-2 bg-secondary/20 rounded-full" />
-      <div className="absolute bottom-[35%] left-[18%] w-3 h-3 bg-secondary/15 rounded-full" />
-      <div className="absolute top-[25%] right-[35%] w-1.5 h-1.5 bg-primary/15 rounded-full" />
+      <div className="absolute top-[15%] left-[10%] w-20 h-20 border border-secondary/10 rounded-full animate-float-slow" />
+      <div className="absolute bottom-[20%] right-[12%] w-32 h-32 border border-primary/10 rounded-full animate-float-medium" />
+      <div className="absolute top-[40%] right-[20%] w-2 h-2 bg-secondary/20 rounded-full animate-float-slow [animation-delay:2s]" />
+      <div className="absolute bottom-[35%] left-[18%] w-3 h-3 bg-secondary/15 rounded-full animate-float-medium [animation-delay:1s]" />
+      <div className="absolute top-[25%] right-[35%] w-1.5 h-1.5 bg-primary/15 rounded-full animate-float-slow [animation-delay:3s]" />
 
       <div className="text-center max-w-lg relative z-10">
         {/* Large 404 */}
