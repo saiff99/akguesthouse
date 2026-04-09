@@ -1,0 +1,40 @@
+name: Build and Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main # Change this to 'master' if your main branch is called master
+
+jobs:
+  web-deploy:
+    name: Deploy to Hostinger
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Grab the latest code from your GitHub repo
+    - name: Get latest code
+      uses: actions/checkout@v4
+
+    # 2. Set up the environment to run Node.js (which Lovable uses)
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20' 
+
+    # 3. Install your project's dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # 4. Build the project (This creates the 'dist' folder)
+    - name: Build project
+      run: npm run build
+
+    # 5. Send the 'dist' folder to Hostinger
+    - name: Sync files via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./dist/ 
+        server-dir: ./ # See note below about this path
