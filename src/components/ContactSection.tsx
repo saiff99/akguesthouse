@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle, MessageSquare } from "lucide-react";
 import { toast } from "sonner";
 
 type SubmitStatus = "idle" | "sending" | "success" | "error";
@@ -85,16 +85,31 @@ const ContactSection = () => {
               {status === "sending" ? "Sending..." : "Send Inquiry"}
             </Button>
 
-            <Button
-              asChild
-              variant="outline"
-              className="w-full font-semibold border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
-            >
-              <a href="tel:+919831319095" aria-label="Call AK Guest House for reservations">
-                <Phone size={16} />
-                Call Now: +91 98313 19095
-              </a>
-            </Button>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Button
+                asChild
+                variant="outline"
+                className="w-full font-semibold border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+              >
+                <a href="tel:+919831319095" aria-label="Call AK Guest House for reservations">
+                  <Phone size={16} />
+                  Call Now
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="w-full font-semibold border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+              >
+                <a
+                  href="sms:+919831319095?body=Hi%20AK%20Guest%20House%2C%20I%27d%20like%20to%20make%20a%20reservation."
+                  aria-label="Send SMS to AK Guest House for reservations"
+                >
+                  <MessageSquare size={16} />
+                  Text Us
+                </a>
+              </Button>
+            </div>
           </form>
 
           {/* Info */}
