@@ -84,6 +84,17 @@ const ContactSection = () => {
             >
               {status === "sending" ? "Sending..." : "Send Inquiry"}
             </Button>
+
+            <Button
+              asChild
+              variant="outline"
+              className="w-full font-semibold border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+            >
+              <a href="tel:+919831319095" aria-label="Call AK Guest House for reservations">
+                <Phone size={16} />
+                Call Now: +91 98313 19095
+              </a>
+            </Button>
           </form>
 
           {/* Info */}
